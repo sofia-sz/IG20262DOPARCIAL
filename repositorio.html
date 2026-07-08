@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/estilos.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+        <title>Obra - Laurie Anderson</title> 
+    </head>
+    <body>
+        <div id="caja">
+            <header>
+                <h1>Laurie Anderson</h1>
+                <p>Performance, tecnología y narración en el arte contemporáneo</p>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="obra.html">OBRA</a></li>  
+                    <li><a href="repositorio.html">REPOSITORIO</a></li> 
+                </ul>
+            </nav>
+            <main>
+                <section>
+                    <h2>Sistema para gestionar el repositorio de grabaciones digitales de obras musicales de Laurie Anderson.</h2>
+                    <p>Completá este formulario para enterarte de las especificaciones de las obras de Laurie que quieras.</p>
+                    <form>
+                        <label for=>¿Cuántas obras querés ingresar?</label>
+                        <input type="number" name="obras" id="obras">
+
+                        <label for=>Nombre de la obra:</label>
+                        <input type="text" name="nombre" id="nombre">
+
+                        <label for=>Duración de la obra (en minutos):</label>
+                        <input type="number" name="duracion" id="duracion">
+
+                        <label for=>Peso del archivo (en MB):</label>
+                        <input type="number" name="peso" id="peso">
+
+                        <label for=>Tiempo estimado de transferencia por cada MB (en milisegundos):</label>
+                        <input type="number" name="tiempoTransf" id="tiempoTransf">
+
+                        <label for=>Costo mensual de almacenamiento por cada MB:</label>
+                        <input type="number" name="costo" id="costo">
+                        
+                        <button type="button" name="agregar" id="agregar">Agregar obra</button>
+                        
+                        <button type="button" name="agregar" id="agregar">Mostrar especificaciones</button>
+                    </form>
+                    <p class="especificaciones"></p>
+                    <button type="button" name="reiniciar" id="reiniciar">Reiniciar</button>
+                </section>
+            </main>
+            <footer>
+                <address>
+                    <p>Para contactarse escribir a <a href="mailto:laurie@artedigital.com">Laurie Anderson</a></p>
+                </address>
+            </footer>
+        </div>
+        <script src="js/repositorio.js"></script> 
+    </body>
+</html>
