@@ -1,2 +1,3 @@
-# IG20262DOPARCIAL
-Segundo parcial de la materia Informática General de la carrera Artes Multimediales. 
+Sofía Antonella Suárez
+Segundo Parcial - Informática General 
+Artes Multimediales - UNA
