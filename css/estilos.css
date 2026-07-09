@@ -1,0 +1,90 @@
+/* Para mejor control del tamaño de las cajas */
+* { box-sizing: border-box; }
+
+body {
+    width: 100%;
+    margin: 0;
+    /*max-width: 2000px;*/ 
+    background-image: url("../img/fondo.png");
+    background-repeat: repeat;
+
+    /* Para que no maree el bajar por la página */
+    background-attachment: fixed;
+
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Caja con fondo de color sólido más chica que el fondo para mayor legibilidad */
+#caja {
+    width: 80%;
+    background-color: #D5EDF2;
+    padding: 0rem 2rem 2rem 2rem;
+    border-right: 2rem solid;
+    border-left: 2rem solid;    
+    border-color: #277A8C;
+}
+
+header {
+    /* Compensación con márgen negativo para el padding y borde de la #caja */
+    margin: 0 -4rem;
+    background-color:#277A8C;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    /* Compensación con márgen negativo para el padding y borde de la #caja */
+    margin: 0 -4rem;
+    background-color:#073040;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    padding: 1rem 0.5rem;
+}
+
+blockquote {
+    color: #277A8C;
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+#colIguales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hijosIg {
+    padding: 0 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#datoC {
+    display:flex;
+    flex-direction: column;
+}
+
+#dato {
+    align-self: flex-end;
+}
