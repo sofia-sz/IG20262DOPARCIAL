@@ -28,30 +28,45 @@
                     <h2>Sistema para gestionar el repositorio de grabaciones digitales de obras musicales de Laurie Anderson.</h2>
                     <p>Completá este formulario para enterarte de las especificaciones de las obras de Laurie que quieras.</p>
                     <form>
+                        <fieldset> 
                         <label for=>¿Cuántas obras querés ingresar?</label>
                         <input type="number" name="obras" id="obras">
+                        </fieldset>
 
+                        <fieldset> 
                         <label for=>Nombre de la obra:</label>
                         <input type="text" name="nombre" id="nombre">
+                        </fieldset>
 
+                        <fieldset> 
                         <label for=>Duración de la obra (en minutos):</label>
                         <input type="number" name="duracion" id="duracion">
+                        </fieldset>
 
+                        <fieldset> 
                         <label for=>Peso del archivo (en MB):</label>
                         <input type="number" name="peso" id="peso">
-
+                        </fieldset>
+                        
+                        <fieldset> 
                         <label for=>Tiempo estimado de transferencia por cada MB (en milisegundos):</label>
                         <input type="number" name="tiempoTransf" id="tiempoTransf">
+                        </fieldset>
 
+                        <fieldset> 
                         <label for=>Costo mensual de almacenamiento por cada MB:</label>
                         <input type="number" name="costo" id="costo">
+                        </fieldset>
                         
+                        <fieldset id="buttons"> 
                         <button type="button" name="agregar" id="agregar">Agregar obra</button>
                         
                         <button type="button" name="agregar" id="agregar">Mostrar especificaciones</button>
+
+                        <button type="button" name="reiniciar" id="reiniciar">Reiniciar</button>
+                        </fieldset>
                     </form>
                     <p class="especificaciones"></p>
-                    <button type="button" name="reiniciar" id="reiniciar">Reiniciar</button>
                 </section>
             </main>
             <footer>

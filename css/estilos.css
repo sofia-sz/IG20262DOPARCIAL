@@ -1,10 +1,18 @@
+/*
+----------- Estilos para todas las páginas -----------
+*/
+
 /* Para mejor control del tamaño de las cajas */
 * { box-sizing: border-box; }
 
+html {
+    height:100%;
+}
+
 body {
     width: 100%;
+    min-height: 100%;
     margin: 0;
-    /*max-width: 2000px;*/ 
     background-image: url("../img/fondo.png");
     background-repeat: repeat;
 
@@ -21,11 +29,18 @@ body {
 /* Caja con fondo de color sólido más chica que el fondo para mayor legibilidad */
 #caja {
     width: 80%;
+    min-height: 100%;
     background-color: #D5EDF2;
     padding: 0rem 2rem 2rem 2rem;
     border-right: 2rem solid;
     border-left: 2rem solid;    
     border-color: #277A8C;
+    display:flex;
+    flex-direction:column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 header {
@@ -36,6 +51,22 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    color: #073040;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-size: 5rem;
+}
+
+header p {
+    color: #D5EDF2;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 nav ul {
@@ -62,10 +93,119 @@ nav a {
     padding: 1rem 0.5rem;
 }
 
+nav li, h1, h2, h3 {
+    font-family: Abel;
+}
+
+nav a:link {
+    color:#D5EDF2;
+    background-color: #073040;
+}
+
+nav a:visited {
+    color:#44AFF2;
+    background-color: #073040;
+}
+
+nav a:hover {
+    color:#073040;
+    background-color: #277A8C;
+}
+
+nav a:active {
+    color:rgb(68, 68, 68);
+    background-color: #D5EDF2;
+}
+
+h2 {
+    color: #073040;
+    font-size: 2rem;
+}
+
+h3 {
+    padding: 0 0 0.5rem 0;
+    margin: 0;
+    color: #073040;
+    font-size: 1.3rem;
+}
+
+article {
+    padding: 0 0 1rem 0;
+}
+
+p {
+    font-size: 1.1rem;
+    padding: 0.5rem 2rem 0.5rem 0;
+    margin: 0;
+}
+
+label {
+    color: #073040;
+    font-size: 1.1rem;
+    font-weight:bold;
+}
+
+ul {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+
+    /* Les agrego un marco con el patrón del fondo general a las imágenes */
+    padding: 0.5rem;
+    background-image: url("../img/fondo.png");
+    margin: 0 0 1.5rem 0;
+}
+
+footer {
+    /* Compensación con márgen negativo para el padding de la #caja */
+    margin: 2rem -4rem -2rem -4rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #277A8C;
+}
+
+footer p {
+    padding: 0.5rem 1rem;
+}
+
+footer address {
+    text-align: center;
+}
+
+footer a:link {
+    color:#D5EDF2;
+}
+
+footer a:visited {
+    color:#44AFF2;
+}
+
+footer a:hover {
+    color:#1BA0F2;
+}
+
+footer a:active {
+    color: #073040;
+}
+
+/*
+----------- Estilos para index.html -----------
+*/
+
 blockquote {
     color: #277A8C;
     text-align: right;
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#frase {
+    font-style:oblique;
+    font-weight: normal;
 }
 
 #colIguales {
@@ -75,16 +215,82 @@ blockquote {
 }
 
 .hijosIg {
-    padding: 0 2rem;
+    padding: 0;
     flex-grow: 1;
     flex-basis: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-#datoC {
+.aside {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside button {
+    align-self: flex-end;
+}
+
+/*
+----------- Estilos para obra.html -----------
+*/
+
+#colDif {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    
+h2 {
+    padding: 1.25rem 0 1rem 0;
+    margin: 0;
+}
+
+#hijo1 {
+    padding: 0;
+    flex-grow: 2;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#hijo2 {
+    padding: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+----------- Estilos para repositorio.html -----------
+*/
+
+form {
+    padding: 1rem 0 0 0;
     display:flex;
     flex-direction: column;
 }
 
-#dato {
-    align-self: flex-end;
+form input, form button {
+    align-self: flex-start;
+}
+
+fieldset {
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+fieldset label {
+    margin-bottom: 0.5rem;
+}
+
+#buttons {
+    flex-direction: row;
+}
+
+#buttons button {
+    margin-right: 0.5rem;
 }
