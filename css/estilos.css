@@ -263,6 +263,49 @@ h2 {
     flex-direction: column;
 }
 
+#galeria {
+    display:flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+
+#imagenes {
+    width: 100%;
+    height: 30rem;
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-image: url("../img/fondo.png");
+}
+
+#imagenes img {
+    min-width: 0;
+    max-width: 50%;
+    max-height: 100%;
+    width: auto;
+    height: auto;    
+    padding: 0;
+    background-image: none;
+    margin: 0 0.5rem;
+}
+
+#pieDeImagenes {
+    padding: 1rem 0;
+    align-self:center;
+}
+
+#pie {
+    padding: 0;
+}
+
+#botones {
+    align-self:center;
+    padding: 0 0;
+}
+
 /*
 ----------- Estilos para repositorio.html -----------
 */
