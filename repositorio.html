@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
-        <title>Obra - Laurie Anderson</title> 
+        <title>Repositorio - Laurie Anderson</title> 
     </head>
     <body>
         <div id="caja">
@@ -16,65 +16,84 @@
                 <h1>Laurie Anderson</h1>
                 <p>Performance, tecnología y narración en el arte contemporáneo</p>
             </header>
+
+            <!-- Menú de navegación -->
             <nav>
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="obra.html">OBRA</a></li>  
-                    <li><a href="repositorio.html">REPOSITORIO</a></li> 
+                    <li><a href="repositorio.html" class="activa">REPOSITORIO</a></li> 
                 </ul>
             </nav>
+
             <main>
                 <section>
                     <h2>Sistema para gestionar el repositorio de grabaciones digitales de obras musicales de Laurie Anderson.</h2>
                     <p>Completá este formulario para enterarte de las especificaciones de las obras de Laurie que quieras.</p>
-                    <form>
-                        <fieldset> 
-                        <label for='obras'>¿Cuántas obras querés ingresar?</label>
-                        <div id = 'cant'>
-                            <input type="number" name="obras" id="obras">
-                            <button type="button" name="definirCant" id="definirCant">Definir</button>
+                    <p>Primero definí la cantidad de obras a ingresar, el tiempo de transferencia por MB y el costo mensual de almacenamiento por MB con el que va a trabajar tu sistema. Después completá los datos de cada obra una por una.</p>
+
+                    <!-- Formulario para resolver el ejercicio -->
+                    <form> 
+
+                        <!-- El primer fieldset define el sistema  -->
+                        <fieldset>
+                        <legend>DEFINIR EL SISTEMA</legend>
+
+                        <div class="campo"> 
+                            <label for="obras">¿Cuántas obras querés ingresar?</label>
+                            <div id = "cant">
+                                <input type="number" name="obras" id="obras">
+                                <button type="button" name="definirCant" id="definirCant">Definir</button>
+                            </div>
                         </div>
-                        </fieldset>
 
-                        <fieldset> 
-                        <label for='tiempoTransf'>Tiempo estimado de transferencia por cada MB (en milisegundos):</label>
-                        <div>
-                            <input type="number" name="tiempoTransf" id="tiempoTransf">
-                            <button type="button" name="definirTiem" id="definirTiem">Definir</button>
+                        <div class='campo'>  
+                            <label for='tiempoTransf'>Tiempo estimado de transferencia por cada MB (en milisegundos):</label>
+                            <div>
+                                <input type="number" name="tiempoTransf" id="tiempoTransf">
+                                <button type="button" name="definirTiem" id="definirTiem">Definir</button>
+                            </div>
                         </div>
-                        </fieldset>
 
-                        <fieldset> 
-                        <label for='costo'>Costo mensual de almacenamiento por cada MB:</label>
-                        <div>
-                            <input type="number" name="costo" id="costo">
-                            <button type="button" name="definirCps" id="definirCos">Definir</button>
+                        <div class='campo'>  
+                            <label for='costo'>Costo mensual de almacenamiento por cada MB:</label>
+                            <div>
+                                <input type="number" name="costo" id="costo">
+                                <button type="button" name="definirCos" id="definirCos">Definir</button>
+                            </div>
                         </div>
+
                         </fieldset>
 
-                        <fieldset> 
-                        <label for='nombre'>Nombre de la obra:</label>
-                        <input class='casilleros' type="text" name="nombre" disabled id="nombre">
-                        </fieldset>
+                        <!-- El segundo fieldset define los datos de cada obra  -->
+                        <fieldset>
+                        <legend>DATOS DE LA OBRA</legend>
 
-                        <fieldset> 
-                        <label for='duracion'>Duración de la obra (en minutos):</label>
-                        <input class='casilleros' type="number" name="duracion" disabled id="duracion">
-                        </fieldset>
+                        <div class='campo'> 
+                            <label for='nombre'>Nombre de la obra:</label>
+                            <input class='casilleros' type="text" name="nombre" disabled id="nombre">
+                        </div>
 
-                        <fieldset> 
-                        <label for='peso'>Peso del archivo (en MB):</label>
-                        <input class='casilleros' type="number" name="peso" disabled id="peso">
+                        <div class='campo'> 
+                            <label for='duracion'>Duración de la obra (en minutos):</label>
+                            <input class='casilleros' type="number" name="duracion" disabled id="duracion">
+                        </div>
+
+                        <div class='campo'> 
+                            <label for='peso'>Peso del archivo (en MB):</label>
+                            <input class='casilleros' type="number" name="peso" disabled id="peso">
+                        </div>
+        
                         </fieldset>
                         
-                        <fieldset id="buttons"> 
-                        <button type="button" name="agregar" id="agregar" disabled>Agregar obra</button>
-                        
-                        <button type="button" name="mostrar" id="mostrar" disabled>Mostrar especificaciones</button>
+                        <div id="botonesRepo"> 
+                            <button type="button" name="agregar" id="agregar" disabled>Agregar obra</button>
+                            <button type="button" name="mostrar" id="mostrar" disabled>Mostrar especificaciones</button>
+                            <button type="button" name="reiniciar" id="reiniciar" disabled>Reiniciar</button>
+                        </div>
 
-                        <button type="button" name="reiniciar" id="reiniciar">Reiniciar</button>
-                        </fieldset>
                     </form>
+
                     <p id="especificaciones"></p>
                 </section>
             </main>

@@ -22,12 +22,12 @@ function indice() {
     return ind;
 }
 
-// Función para cargar un dato random al cargar la página.
+// Detecto si se actualiza la página para cargar un dato random.
 window.addEventListener('load', function() {
     dato.innerText = datos[indice()];
 });
 
-// Función para actualizar el dato al presionar el botón. Con el do while me aseguro de que sea distinto al actual.
+// Detecto si se presiona el botón para cargar un dato random. Con el do while me aseguro de que sea distinto al actual.
 boton.addEventListener('click', function() {
     let indActual = ind;
     do {

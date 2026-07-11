@@ -10,6 +10,7 @@ html {
 }
 
 body {
+    font-family: Calibri, 'Trebuchet MS', 'Segoe UI', sans-serif;
     width: 100%;
     min-height: 100%;
     margin: 0;
@@ -26,9 +27,10 @@ body {
     justify-content: center;
 }
 
-/* Caja con fondo de color sólido más chica que el fondo para mayor legibilidad */
+/* Caja color sólido más chica que el fondo para mayor legibilidad */
 #caja {
     width: 80%;
+    max-width: 75rem;
     min-height: 100%;
     background-color: #D5EDF2;
     padding: 0rem 2rem 2rem 2rem;
@@ -93,8 +95,12 @@ nav a {
     padding: 1rem 0.5rem;
 }
 
-nav li, h1, h2, h3 {
+nav li, h1, h2, h3, strong {
     font-family: Abel;
+}
+
+strong {
+    font-size: 1.05rem;
 }
 
 nav a:link {
@@ -108,16 +114,23 @@ nav a:visited {
 }
 
 nav a:hover {
-    color:#073040;
-    background-color: #277A8C;
+    color:rgb(30, 72, 100);
+    background-color: #d5edf29c;
 }
 
 nav a:active {
-    color:rgb(68, 68, 68);
+    color:#D5EDF2;
+    background-color: #277A8C;
+}
+
+nav a.activa {
+    color:rgb(30, 72, 100);
     background-color: #D5EDF2;
 }
 
 h2 {
+    padding: 1.25rem 0 1rem 0;
+    margin: 0;
     color: #073040;
     font-size: 2rem;
 }
@@ -160,7 +173,7 @@ img {
 }
 
 footer {
-    /* Compensación con márgen negativo para el padding de la #caja */
+    /* Compensación con márgen negativo para el padding y borde de la #caja */
     margin: 2rem -4rem -2rem -4rem;
     padding: 0.5rem;
     display: flex;
@@ -190,6 +203,12 @@ footer a:hover {
 
 footer a:active {
     color: #073040;
+}
+
+.bloque {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /*
@@ -222,13 +241,8 @@ blockquote {
     flex-direction: column;
 }
 
-.aside {
-    padding: 0 0 1rem 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.aside button {
+#botonDato {
+    padding: 0.5rem;
     align-self: flex-end;
 }
 
@@ -241,29 +255,24 @@ blockquote {
     flex-direction: row;
     justify-content: center;
 }
-    
-h2 {
-    padding: 1.25rem 0 1rem 0;
-    margin: 0;
+
+#hijo1, #hijo2 {
+    padding: 0;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #hijo1 {
-    padding: 0;
     flex-grow: 2;
-    flex-basis: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 #hijo2 {
-    padding: 0;
     flex-grow: 1;
-    flex-basis: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 #galeria {
+    margin-top: 1rem;
     display:flex;
     flex-direction: column;
     padding-right: 2rem;
@@ -288,6 +297,8 @@ h2 {
     width: auto;
     height: auto;    
     padding: 0;
+
+    /* Les quito el background-image que definí antes para img en general */
     background-image: none;
     margin: 0 0.5rem;
 }
@@ -301,9 +312,33 @@ h2 {
     padding: 0;
 }
 
-#botones {
-    align-self:center;
-    padding: 0 0;
+#botonesGaleria {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+#espaciador {
+    flex: 1;
+    min-width: 0;
+}
+
+#botonesCentro {
+    display: flex;
+}
+
+#botonesCentro button {
+    margin: 0 0 0 0.1rem;
+}
+
+#botonDer {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*
@@ -320,24 +355,36 @@ form input, form button {
     align-self: flex-start;
 }
 
-fieldset {
-    display:flex;
+.campo {
+    display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 0 1.5rem 0; 
+    padding: 1rem;
+    border: 0.125rem dashed #277A8C;
+    background-color: #bddfe6;
 }
 
-fieldset label {
-    margin-bottom: 0.5rem;
+fieldset {
+    background-color:#277A8C;
+    padding: 1rem 1.5rem 0 1.5rem;
+    border: 0.125rem dashed #bddfe6;
+    margin: 0 0 1rem 0;
 }
 
-#buttons {
+legend {
+    font-weight: bold;
+    background-color: #44AFF2;
+}
+
+#botonesRepo {
+    margin-top: 0.5rem;
     flex-direction: row;
 }
 
-#buttons button {
+#botonesRepo button {
     margin-right: 0.5rem;
 }
 
 #especificaciones {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }

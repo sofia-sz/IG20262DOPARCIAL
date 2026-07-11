@@ -65,6 +65,7 @@ function reiniciar() {
     });
     definidos = 0;
     especificaciones.innerText = '';
+    botonReiniciar.disabled = true;
 }
 
 // Función que habilita el botón Agregar una vez se llene la información de la obra.
@@ -203,4 +204,5 @@ botonMostrar.addEventListener('click', function() {
     La obra de mayor duración es "` + masLarga() + `" y tiene un tiempo de transferencia necesario de ` + tiempoMasLarga(masLarga()) + ` milisegundos para descargarla.
     El presupuesto necesario para mantener funcionando el repositorio durante un año es de $` + presupuesto() + `.`;
     botonMostrar.disabled = true;
+    botonReiniciar.disabled = false;
 });

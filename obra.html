@@ -16,14 +16,20 @@
                 <h1>Laurie Anderson</h1>
                 <p>Performance, tecnología y narración en el arte contemporáneo</p>
             </header>
+
+            <!-- Menú de navegación -->
             <nav>
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
-                    <li><a href="obra.html">OBRA</a></li>  
+                    <li><a href="obra.html" class="activa">OBRA</a></li>  
                     <li><a href="repositorio.html">REPOSITORIO</a></li> 
                 </ul>
             </nav>
+
+            <!-- El layout tendrá dos columnas de distinto tamaño -->
             <main id="colDif">
+
+                <!-- Columna 1 -->
                 <section id="hijo1">
                     <h2>Obra</h2>
                     <article>
@@ -32,10 +38,10 @@
                                 El trabajo de Laurie Anderson se caracteriza por la integración de tecnologías en sus procesos creativos, no como un fin en sí mismo, sino como una herramienta para expandir el lenguaje artístico. Utiliza dispositivos electrónicos, procesamiento de voz y medios audiovisuales para construir experiencias que combinan relato y experimentación.
                             </p>
                             <p>
-                                Sus obras suelen desarrollarse como narraciones fragmentadas, donde la voz guía al espectador a través de historias que mezclan lo personal, lo político y lo ficticio. Este enfoque permite explorar nuevas formas de contar, donde la estructura no es lineal y la interpretación queda abierta.
+                                Sus obras suelen desarrollarse como <strong>narraciones fragmentadas</strong>, donde la voz guía al espectador a través de historias que mezclan lo personal, lo político y lo ficticio. Este enfoque permite explorar nuevas formas de contar, donde la estructura no es lineal y la interpretación queda abierta.
                             </p>
                     </article>
-                    <aside class="aside">
+                    <aside class="bloque">
                         <h3>Obras y conceptos clave</h3>
                         <ul>
                             <li>O Superman</li>
@@ -46,7 +52,7 @@
                             <li>Manipulación de la voz</li>
                         </ul>
                     </aside>
-                    <section class="aside">
+                    <section class="bloque">
                         <h3>Galería de obras</h3>
                         <section id="galeria">
                             <div id="imagenes">
@@ -58,19 +64,27 @@
                                     Chalkroom, 2017
                                 </p>
                             </div>
-                            <div id="botones">
-                                <button type="button" name="anterior" id="anterior" disabled>Anterior</button>
-                                <button type="button" name="siguiente" id="siguiente">Siguiente</button>
+                            <div id="botonesGaleria">
+                                <div id="espaciador"></div>
+                                <div id="botonesCentro">
+                                    <button type="button" name="anterior" id="anterior" disabled>Anterior</button>
+                                    <button type="button" name="siguiente" id="siguiente">Siguiente</button>
+                                </div>
+                                <div id="botonDer">
+                                    <button type="button" name="cambiarFondo" id="cambiarFondo">Cambiar fondo</button>
+                                </div>
                             </div>
                         </section>
                     </section>
                 </section>
+
+                <!-- Columna 2 -->
                 <section id="hijo2">
                     <h2>Enfoque</h2>
                     <article>
                         <h3>El lenguaje como materia artística</h3>
                         <p>
-                            El lenguaje ocupa un lugar central en la obra de Laurie Anderson. Sus piezas exploran cómo las palabras construyen significado y cómo pueden ser transformadas mediante la repetición, la fragmentación y el uso de tecnología.
+                            El <strong>lenguaje</strong> ocupa un lugar central en la obra de Laurie Anderson. Sus piezas exploran cómo las palabras construyen significado y cómo pueden ser transformadas mediante la repetición, la fragmentación y el uso de tecnología.
                         </p>
                         <p>
                             A través de estas estrategias, el lenguaje deja de ser únicamente un medio de comunicación para convertirse en un material artístico. Sus obras revelan las tensiones entre lo que se dice, lo que se escucha y lo que se interpreta.
@@ -79,7 +93,7 @@
                     <article>
                         <h3>La performance como experiencia</h3>
                         <p>
-                            La performance es uno de los principales formatos en los que desarrolla su trabajo. En sus presentaciones, combina música, proyecciones visuales y narración en vivo para crear experiencias inmersivas.
+                            La <strong>performance</strong> es uno de los principales formatos en los que desarrolla su trabajo. En sus presentaciones, combina música, proyecciones visuales y narración en vivo para crear experiencias inmersivas.
                         </p>
                         <p>
                             Estas performances no solo transmiten un contenido, sino que construyen un espacio de interacción con el público. La presencia del cuerpo, la voz y la tecnología genera una relación directa que redefine el rol del espectador.
@@ -88,14 +102,16 @@
                     <article>
                         <h3>Cruces entre arte y tecnología</h3>
                         <p>
-                            Laurie Anderson ha sido una pionera en la incorporación de nuevas tecnologías en el arte. Desde instrumentos modificados hasta sistemas digitales, su trabajo investiga cómo la tecnología puede influir en la creación y la percepción artística.
+                            Laurie Anderson ha sido una <strong>pionera</strong> en la incorporación de nuevas tecnologías en el arte. Desde instrumentos modificados hasta sistemas digitales, su trabajo investiga cómo la tecnología puede influir en la creación y la percepción artística.
                         </p>
                         <p>
                             Este cruce ha permitido ampliar las posibilidades del arte contemporáneo, integrando herramientas que transforman tanto los procesos como los resultados. Su obra continúa siendo relevante en un contexto donde la tecnología ocupa un lugar central en la cultura.
                         </p>
                     </article>
                 </section>
+
             </main>
+
             <footer>
                 <address>
                     <p>Para contactarse escribir a <a href="mailto:laurie@artedigital.com">Laurie Anderson</a></p>
