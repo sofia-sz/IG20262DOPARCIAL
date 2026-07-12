@@ -23,10 +23,11 @@ let botonMostrar = document.querySelector('#mostrar');
 let botonReiniciar = document.querySelector('#reiniciar');
 
 // Declaro un array que captura los inputs de cada obra.
-let casillerosNodeList = document.querySelectorAll('.casilleros');
-let casilleros = [];
-casillerosNodeList.forEach(function(x) {
-    casilleros.push(x);
+// El querySelectorAll los captura en un NodeList, el cual no me permite usar el método slice, por lo que luego los paso a un array.
+let obraAAgregarNodeList = document.querySelectorAll('.casilleros');
+let obraAAgregar = [];
+obraAAgregarNodeList.forEach(function(x) {
+    obraAAgregar.push(x);
 });
 
 // Declaro una variable que captura el párrafo en el que mostraré el resultado.
@@ -59,7 +60,7 @@ function reiniciar() {
     botonAgregar.disabled = true;
     botonMostrar.disabled = true;
     obras = [];
-    casilleros.forEach(function(x) {
+    obraAAgregar.forEach(function(x) {
         x.value = '';
         x.disabled = true;
     });
@@ -71,7 +72,7 @@ function reiniciar() {
 // Función que habilita el botón Agregar una vez se llene la información de la obra.
 function chequearFormLleno() {
     let lleno = true;
-    casilleros.forEach(function(x) {
+    obraAAgregar.forEach(function(x) {
         if (x.value == '') {
             lleno = false;
         }
@@ -82,7 +83,7 @@ function chequearFormLleno() {
 // Función que valida y agrega la obra al array de obras.
 function validarYAgregar() {
     let valido = true;
-    let nombre = casilleros[0].value;
+    let nombre = obraAAgregar[0].value;
     obras.forEach(function(x) {
         if (x.nombre == nombre) {
             alert('Esa obra ya fue guardada');
@@ -93,7 +94,7 @@ function validarYAgregar() {
     nombre: nombre,
     };
     let claves = ['duracion', 'peso'];
-    casilleros.slice(1).forEach(function(x, i) {
+    obraAAgregar.slice(1).forEach(function(x, i) {
         if (x.value == '' || Number(x.value) <= 0) {
             alert(alertasObra[i]);
             valido = false;
@@ -102,12 +103,12 @@ function validarYAgregar() {
     })
     if (valido) {
         obras.push(obra);
-        casilleros.forEach(function(x){
+        obraAAgregar.forEach(function(x){
             x.value = '';
         });
         chequearFormLleno();
         if (obras.length == Number(repositorio[0].input.value)) {
-            casilleros.forEach(function(x){
+            obraAAgregar.forEach(function(x){
                 x.disabled = true;
             });
             botonAgregar.disabled = true;
@@ -169,7 +170,7 @@ botonReiniciar.addEventListener('click', function(){
 });
 
 // Detecto si se llenaron los casilleros de la obra para habilitar el botón agregar.
-casilleros.forEach(function(x) {
+obraAAgregar.forEach(function(x) {
     x.addEventListener('input', chequearFormLleno);
 });
 
@@ -185,7 +186,7 @@ repositorio.forEach(function(x, i) {
         }
         if (definidos == 3) {
             definidos = 0;
-            casilleros.forEach(function(x){
+            obraAAgregar.forEach(function(x){
                 x.disabled = false;
             });
     }
